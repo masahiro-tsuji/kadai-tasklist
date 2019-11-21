@@ -59,7 +59,7 @@ public class UpdateServlet extends HttpServlet {
             request.getSession().removeAttribute("task_id");
 
             //indexページへリダイレクト
-            response.sendRedirect(request.getContextPath()+"/inex");
+            response.sendRedirect(request.getContextPath()+"/index");
         }
 
     }
