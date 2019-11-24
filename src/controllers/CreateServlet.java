@@ -17,13 +17,13 @@ import utils.DBUtil;
  * Servlet implementation class Create
  */
 @WebServlet("/create")
-public class Create extends HttpServlet {
+public class CreateServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Create() {
+    public CreateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -51,6 +51,7 @@ public class Create extends HttpServlet {
             em.getTransaction().begin();
             em.persist(t);
             em.getTransaction().commit();
+            request.getSession().setAttribute("flush", "登録が完了しました。");
             em.close();
 
             response.sendRedirect(request.getContextPath() + "/index");
