@@ -16,7 +16,7 @@
 <br />
 <br />
 
-<label for="content">メッセージ</label>
+<label for="content">タスク</label>
 <br />
 <input type="text" name="content" value="${task.content}" />
 <br />
